@@ -33,9 +33,10 @@ public class UserDaoImpl implements UserDao {
 		
 		UserDetailsUD theUser = null;
 		try {
-			theUser = theQuery.list().get(0);
+			//theUser = theQuery.list().get(0); //getting user via list
+			theUser = theQuery.getSingleResult(); // this will work only when there is one entry in db
 		} catch (Exception e) {
-			System.out.println("Exception");
+			//System.out.println("Exception");
 			theUser = null;
 		}
 	

@@ -68,7 +68,7 @@ public class Control {
 		String entry = "Error: Query didnt't run";
 		
 		// check the database if user already exists
-        UserDetailsUD existing = userDao.findByMobileNumberUD(mobileNumberUD);
+        UserDetailsUD existing = userService.findByMobileNumberUD(mobileNumberUD);
 		System.out.println("User found in database " + existing);
         
 				

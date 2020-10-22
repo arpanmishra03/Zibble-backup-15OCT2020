@@ -16,6 +16,13 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserDao userDao;
 
+	@Override
+	@Transactional
+	public UserDetailsUD findByMobileNumberUD(String mobileNumberUD) {
+		// check the database if the user already exists
+		return userDao.findByMobileNumberUD(mobileNumberUD);
+	}
+
 
 	@Override
 	@Transactional
